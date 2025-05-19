@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hoja de Vida - Yecid Riascos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Fondo de partículas -->
+  <div id="particles-js"></div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+
+    <div style="text-align: center;">
+      <img src="foto.jpg" alt="Foto de Yecid Riascos" />
+      <h1>Cesar Yecid Riascos Buesaquillo</h1>
+      <p><strong>Licenciado en Informática</strong></p>
+    </div>
+
+    <div class="info-habilidades-container">
+
+      <section class="fade-up info-personal">
+        <h2>Información Personal</h2>
+        <ul>
+          <li><strong>Dirección:</strong> Calle 12 #4-267, La Unión</li>
+          <li><strong>Teléfono:</strong> 3225264831</li>
+          <li><strong>Email:</strong> yecidriascos9@gmail.com</li>
+          <li><strong>Fecha de nacimiento:</strong> 08/05/2000</li>
+          <li><strong>Nacionalidad:</strong> Colombiano</li>
+        </ul>
+      </section>
+
+      <section class="fade-up habilidades">
+        <h2>Habilidades</h2>
+
+        <div class="rating-skill">
+          <label>Comunicación efectiva</label>
+          <div class="stars" data-score="5">★★★★★</div>
+        </div>
+
+        <div class="rating-skill">
+          <label>Trabajo en equipo</label>
+          <div class="stars" data-score="4">★★★★☆</div>
+        </div>
+
+        <div class="rating-skill">
+          <label>Resolución de problemas</label>
+          <div class="stars" data-score="4">★★★★☆</div>
+        </div>
+
+        <div class="rating-skill">
+          <label>Puntualidad</label>
+          <div class="stars" data-score="5">★★★★★</div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <section class="fade-up">
+      <h2>Perfil Profesional</h2>
+      <p>
+Licenciado en Informática con entusiasmo por el campo educativo y ganas de aprender y crecer profesionalmente. Comprometido con la mejora continua y la adquisición de nuevas habilidades para aportar valor en equipos y proyectos. Poseo una sólida formación en tecnología y sistemas, enfocada en apoyar procesos educativos mediante la integración de TIC.      </p>
+    </section>
+
+    <section class="fade-up">
+      <h2>Idiomas</h2>
+      <p>Inglés</p>
+       <div class="stars" data-score="4">★★☆☆☆</div>
+    </section>
+
+    <section class="fade-up">
+      <h2>Experiencia Laboral</h2>
+      <ul>
+        <li><strong>Docente (en formación)</strong> – I.E.M. Santa Teresita - Pasto (01/2022 - 12/2022)</li>
+      </ul>
+    </section>
+
+    <section class="fade-up">
+      <h2>Educación</h2>
+      <ul>
+        <li><strong>Licenciado en Informática</strong> – Universidad de Nariño (08/2017 - 09/2024)</li>
+        <li><strong>Diplomado en Inteligencia Computacional</strong> – Universidad CESMAG (12/2023 - 04/2024)</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- Script de la librería particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Script de configuración de partículas -->
+  <script src="particles-config.js"></script>
+
+  <!-- Script para animar las secciones al hacer scroll -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
